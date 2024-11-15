@@ -71,12 +71,6 @@ project(":modules:internal:weather-api") {
     dependencies {
         implementation(project(":modules:domain:weather-domain"))
     }
-//    jar {
-//        enabled = true
-//    }
-//    bootJar {
-//        enabled = false
-//    }
 }
 
 project(":modules:domain:weather-domain") {
