@@ -1,3 +1,5 @@
 rootProject.name = 'bigs'
-include 'api'
-include 'domain'
+include 'modules:domain:weather-domain'
+include 'modules:internal:weather-api'
+include 'modules:application:sync-application'
+include 'modules:application:inquire-application'

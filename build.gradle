@@ -53,13 +53,33 @@ subprojects {
     }
 }
 
-project(":api") {
+project(":modules:application:sync-application") {
     dependencies {
-        implementation(project(":domain"))
+        implementation(project(":modules:domain:weather-domain"))
+        implementation(project(":modules:internal:weather-api"))
     }
 }
 
-project(":domain") {
+project(":modules:application:inquire-application") {
+    dependencies {
+        implementation(project(":modules:domain:weather-domain"))
+        implementation(project(":modules:internal:weather-api"))
+    }
+}
+
+project(":modules:internal:weather-api") {
+    dependencies {
+        implementation(project(":modules:domain:weather-domain"))
+    }
+//    jar {
+//        enabled = true
+//    }
+//    bootJar {
+//        enabled = false
+//    }
+}
+
+project(":modules:domain:weather-domain") {
     jar {
         enabled = true
     }
