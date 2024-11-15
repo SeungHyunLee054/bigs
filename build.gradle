@@ -8,9 +8,7 @@ group = 'com.lsh'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
+    sourceCompatibility = '17'
 }
 
 configurations {
@@ -30,7 +28,8 @@ subprojects {
         plugin('io.spring.dependency-management')
     }
 
-//    languageVersion = JavaLanguageVersion.of(17)
+    sourceCompatibility = '17'
+    targetCompatibility = '17'
 
     configurations {
         compileOnly {
@@ -43,7 +42,6 @@ subprojects {
     }
 
     dependencies {
-        implementation 'org.springframework.boot:spring-boot-starter'
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'

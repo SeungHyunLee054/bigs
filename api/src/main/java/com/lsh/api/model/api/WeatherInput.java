@@ -1,4 +1,4 @@
-package com.lsh.api.model.dto;
+package com.lsh.api.model.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,10 +10,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class WeatherInput {
-    private int pageNo;
-    private int numOfRows;
+    private String numOfRows;
     private String dataType = "JSON";
-    private int base_time;
-    private int nx;
-    private int ny;
+    private String base_date;
+    private String base_time;
+    private String nx;
+    private String ny;
 }
